@@ -1,0 +1,15 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeNamePlural: 'Remessas' }
+annotate view ZI_RemessaRabbitMQ with
+{
+  @UI.lineItem: [{ position: 10 },
+                 { type: #FOR_ACTION,
+                   invocationGrouping: #CHANGE_SET,
+                   position: 0,
+                   dataAction: 'MPC_EXT:Enviar', label: 'Enviar'}]
+  @UI.selectionField: [{ position: 10 }]
+  Remessa;
+  
+  @UI.lineItem: [{ position: 20 }]
+  Mensagem;
+}
